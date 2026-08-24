@@ -1,4 +1,4 @@
-# neuland.app-food-service
+# app-backend-food
 
 Food microservice for **Neuland Backend 2.0** — scraping, normalization, caching.
 
@@ -11,7 +11,7 @@ Food microservice for **Neuland Backend 2.0** — scraping, normalization, cachi
 
 ## Related repos
 
-- [neuland.app-contracts](https://github.com/neuland-ingolstadt/neuland.app-contracts) — OpenAPI specs
-- [neuland.app-core-api](https://github.com/neuland-ingolstadt/neuland.app-core-api) — proxies food requests from Public API
-- [neuland.app-cloud-gateway](https://github.com/neuland-ingolstadt/neuland.app-cloud-gateway) — external entry point
+- [app-backend-contracts](https://github.com/neuland-ingolstadt/app-backend-contracts) — OpenAPI specs
+- [app-backend-core](https://github.com/neuland-ingolstadt/app-backend-core) — proxies food requests from Public API
+- [app-backend-cloud-gateway](https://github.com/neuland-ingolstadt/app-backend-cloud-gateway) — external entry point
 - [neuland.app-backend](https://github.com/neuland-ingolstadt/neuland.app-backend) — legacy GraphQL backend (to be retired)
