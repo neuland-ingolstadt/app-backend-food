@@ -1,8 +1,0 @@
-.git
-.github
-.idea
-.vscode
-**/target
-**/.classpath
-**/.project
-**/.settings
