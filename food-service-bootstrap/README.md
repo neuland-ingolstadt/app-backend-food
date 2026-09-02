@@ -16,6 +16,21 @@ You can run your application in dev mode that enables live coding using:
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
 
+# Health checks
+
+Health check endpoints are exposed on a separate **management port** (`9002`), not on the main application port. This keeps liveness/readiness probes internal-only and separated from public traffic.
+
+Available endpoints on the management port:
+
+| Endpoint                          | Purpose                    |
+|------------------------------------|-----------------------------|
+| `http://localhost:9002/`           | Aggregated health status    |
+| `http://localhost:9002/livez`      | Liveness probe               |
+| `http://localhost:9002/readyz`     | Readiness probe              |
+| `http://localhost:9002/startedz`   | Startup probe                 |
+
+Configure Kubernetes probes (`livenessProbe`, `readinessProbe`, `startupProbe`) to target port `9002` and the paths above instead of the default `8080` / `/q/health/...`.
+
 ## Packaging and running the application
 
 The application can be packaged using:
