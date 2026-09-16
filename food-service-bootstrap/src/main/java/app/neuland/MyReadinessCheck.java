@@ -2,14 +2,14 @@ package app.neuland;
 
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
-import org.eclipse.microprofile.health.Liveness;
+import org.eclipse.microprofile.health.Readiness;
 
-@Liveness
-public class MyLivenessCheck implements HealthCheck {
+@Readiness
+public class MyReadinessCheck implements HealthCheck {
 
     @Override
     public HealthCheckResponse call() {
-        return HealthCheckResponse.up("my-liveness-check");
+        return HealthCheckResponse.up("my-readiness-check");
     }
 
 }
